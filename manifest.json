@@ -1,0 +1,10 @@
+{
+  "name": "PD Coaching",
+  "short_name": "PD Coaching",
+  "start_url": "home.html",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#d4af37",
+  "description": "PD Coaching Student Management System",
+  "icons": []
+}

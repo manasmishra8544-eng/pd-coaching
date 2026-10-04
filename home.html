@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | PD Coaching</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                PD
+            </div>
+
+            <div class="brand-text">
+                <h2>PD Coaching</h2>
+                <span>Pankaj Durvadi</span>
+            </div>
+
+        </div>
+
+        <nav class="navigation">
+
+            <a href="home.html" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Home</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Students</span>
+            </a>
+
+            <a href="fees.html" class="nav-item">
+                <span class="nav-icon">₹</span>
+                <span>Fees</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item">
+                <span class="nav-icon">✓</span>
+                <span>Attendance</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-card">
+
+                <div class="admin-avatar">
+                    PD
+                </div>
+
+                <div>
+                    <strong>Pankaj Durvadi</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <span class="eyebrow">
+                    PD COACHING • ADMINISTRATION
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Everything you need to manage your coaching.
+                </p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="date-box">
+                    <span>Today</span>
+                    <strong id="todayDate">—</strong>
+                </div>
+                 <button id="installAppBtn" class="install-app-btn" style="display: none;">
+            ⬇ Install PD Coaching
+        </button>
+
+                <div class="profile-circle">
+                    PD
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+
+            <!-- HERO -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>
+                        Good to see you, Pankaj.
+                    </h2>
+
+                    <p>
+                        Manage students, track fees and keep your
+                        coaching organised from one place.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="students.html" class="primary-btn">
+                            <span>+</span>
+                            Add Student
+                        </a>
+
+                        <a href="fees.html" class="secondary-btn">
+                            View Fees
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-logo">
+                    <div class="hero-logo-inner">
+                        PD
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- STATS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ♙
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Students</span>
+
+                        <strong id="totalStudents">
+                            0
+                        </strong>
+
+                        <small>
+                            Registered students
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ₹
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Collected</span>
+
+                        <strong id="collectedAmount">
+                            ₹0
+                        </strong>
+
+                        <small>
+                            This month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon warning">
+                        !
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Pending Fees</span>
+
+                        <strong id="pendingAmount">
+                            ₹0
+                        </strong>
+
+                        <small>
+                            To be collected
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Attendance</span>
+
+                        <strong id="attendanceRate">
+                            0%
+                        </strong>
+
+                        <small>
+                            Overall attendance
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TWO COLUMN AREA -->
+            <section class="main-grid">
+
+
+                <!-- QUICK ACTIONS -->
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-label">
+                                SHORTCUTS
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+                        <a href="students.html" class="quick-card">
+
+                            <div class="quick-icon">
+                                +
+                            </div>
+
+                            <div>
+                                <strong>Add Student</strong>
+                                <span>Register a new student</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </a>
+
+
+                        <a href="fees.html" class="quick-card">
+
+                            <div class="quick-icon">
+                                ₹
+                            </div>
+
+                            <div>
+                                <strong>Manage Fees</strong>
+                                <span>Track monthly payments</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </a>
+
+
+                        <a href="attendance.html" class="quick-card">
+
+                            <div class="quick-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <strong>Attendance</strong>
+                                <span>Mark today's attendance</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </a>
+
+
+                        <a href="settings.html" class="quick-card">
+
+                            <div class="quick-icon">
+                                ⚙
+                            </div>
+
+                            <div>
+                                <strong>Settings</strong>
+                                <span>Manage coaching profile</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OVERVIEW -->
+                <div class="panel overview-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-label">
+                                OVERVIEW
+                            </span>
+
+                            <h2>
+                                Monthly Fees
+                            </h2>
+                        </div>
+
+                        <a href="fees.html">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="fee-overview">
+
+                        <div class="fee-row">
+
+                            <div class="fee-icon">
+                                ₹
+                            </div>
+
+                            <div class="fee-text">
+                                <span>Expected</span>
+                                <strong id="expectedAmount">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="fee-row">
+
+                            <div class="fee-icon collected">
+                                ✓
+                            </div>
+
+                            <div class="fee-text">
+                                <span>Collected</span>
+                                <strong id="overviewCollected">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="fee-row">
+
+                            <div class="fee-icon pending">
+                                !
+                            </div>
+
+                            <div class="fee-text">
+                                <span>Pending</span>
+                                <strong id="overviewPending">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-area">
+
+                        <div class="progress-top">
+                            <span>Collection progress</span>
+                            <strong id="collectionRate">0%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div id="progressFill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT STUDENTS -->
+            <section class="panel recent-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            STUDENTS
+                        </span>
+
+                        <h2>
+                            Recent Students
+                        </h2>
+
+                    </div>
+
+                    <a href="students.html">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div id="recentStudents" class="recent-students">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ♙
+                        </div>
+
+                        <div>
+                            <strong>No students yet</strong>
+                            <span>Add your first student to get started.</span>
+                        </div>
+
+                        <a href="students.html">
+                            Add Student
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                <span>
+                    © 2026 PD Coaching
+                </span>
+
+                <span>
+                    Pankaj Durvadi • Administration
+                </span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="home.js"></script>
+
+</body>
+</html>

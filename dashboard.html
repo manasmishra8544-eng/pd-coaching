@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | PD Coaching</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">PD</div>
+
+            <div class="brand-text">
+                <h2>PD Coaching</h2>
+                <span>Pankaj Durvadi</span>
+            </div>
+        </div>
+        <nav class="navigation">
+
+    <a href="dashboard.html" class="nav-item active">
+        <span class="nav-icon">⌂</span>
+        <span>Home</span>
+    </a>
+
+</nav>
+
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Students</span>
+            </a>
+
+            <a href="fees.html" class="nav-item">
+                <span class="nav-icon">₹</span>
+                <span>Fees</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">✓</span>
+                <span>Attendance</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>Tests & Marks</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Reminders</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-card">
+
+                <div class="admin-avatar">
+                    PD
+                </div>
+
+                <div>
+                    <strong>Pankaj Durvadi</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <span class="eyebrow">
+                    PD COACHING • ADMINISTRATION
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Your coaching overview at a glance.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-button">
+                    🔔
+                </button>
+
+                <div class="top-profile">
+
+                    <div class="profile-avatar">
+                        PD
+                    </div>
+
+                    <div>
+                        <strong>Pankaj</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+
+            <!-- WELCOME -->
+            <div class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span class="gold-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>
+                        Good to see you, Pankaj.
+                    </h2>
+
+                    <p>
+                        Manage students, fees and coaching activities
+                        from one premium workspace.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-mark">
+                    PD
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ♙
+                        </div>
+
+                        <span class="stat-label">
+                            STUDENTS
+                        </span>
+
+                    </div>
+
+                    <strong
+                        id="totalStudents"
+                        class="stat-value">
+                        0
+                    </strong>
+
+                    <p>
+                        Total students
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ₹
+                        </div>
+
+                        <span class="stat-label">
+                            COLLECTED
+                        </span>
+
+                    </div>
+
+                    <strong
+                        id="collectedAmount"
+                        class="stat-value">
+                        ₹0
+                    </strong>
+
+                    <p>
+                        This month
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            !
+                        </div>
+
+                        <span class="stat-label">
+                            PENDING
+                        </span>
+
+                    </div>
+
+                    <strong
+                        id="pendingAmount"
+                        class="stat-value">
+                        ₹0
+                    </strong>
+
+                    <p>
+                        Fee pending
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            %
+                        </div>
+
+                        <span class="stat-label">
+                            ATTENDANCE
+                        </span>
+
+                    </div>
+
+                    <strong
+                        id="attendanceRate"
+                        class="stat-value">
+                        0%
+                    </strong>
+
+                    <p>
+                        Overall attendance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN GRID -->
+            <div class="dashboard-grid">
+
+
+                <!-- FEE OVERVIEW -->
+                <section class="panel large-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                FINANCE
+                            </span>
+
+                            <h2>
+                                Fee Collection
+                            </h2>
+
+                        </div>
+
+                        <a href="fees.html" class="view-link">
+                            View Fees →
+                        </a>
+
+                    </div>
+
+
+                    <div class="finance-summary">
+
+                        <div>
+
+                            <span>
+                                Expected
+                            </span>
+
+                            <strong id="expectedAmount">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Collected
+                            </span>
+
+                            <strong id="dashboardCollected">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong id="dashboardPending">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="chart-line line-one"></div>
+                        <div class="chart-line line-two"></div>
+                        <div class="chart-line line-three"></div>
+
+                        <div class="chart-bars">
+
+                            <span style="height:35%"></span>
+                            <span style="height:52%"></span>
+                            <span style="height:42%"></span>
+                            <span style="height:68%"></span>
+                            <span style="height:58%"></span>
+                            <span style="height:78%"></span>
+                            <span style="height:92%"></span>
+                            <span style="height:70%"></span>
+                            <span style="height:84%"></span>
+                            <span style="height:64%"></span>
+                            <span style="height:76%"></span>
+                            <span style="height:88%"></span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- QUICK ACTIONS -->
+                <section class="panel quick-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                SHORTCUTS
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a href="students.html" class="quick-action">
+
+                            <span class="quick-icon">
+                                +
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Add Student
+                                </strong>
+
+                                <small>
+                                    Register a new student
+                                </small>
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="fees.html" class="quick-action">
+
+                            <span class="quick-icon">
+                                ₹
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Manage Fees
+                                </strong>
+
+                                <small>
+                                    Track monthly payments
+                                </small>
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <span class="quick-icon">
+                                ✓
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Attendance
+                                </strong>
+
+                                <small>
+                                    Mark today's attendance
+                                </small>
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <span class="quick-icon">
+                                ◇
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Add Test
+                                </strong>
+
+                                <small>
+                                    Create a new test
+                                </small>
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT STUDENTS -->
+                <section class="panel recent-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                STUDENTS
+                            </span>
+
+                            <h2>
+                                Recent Students
+                            </h2>
+
+                        </div>
+
+                        <a href="students.html" class="view-link">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        id="recentStudents"
+                        class="recent-students">
+
+                        <div class="empty-mini">
+                            <span>♙</span>
+                            <p>
+                                Students will appear here.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- REMINDERS -->
+                <section class="panel reminder-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ATTENTION
+                            </span>
+
+                            <h2>
+                                Reminders
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="remindersList"
+                        class="reminders-list">
+
+                        <div class="reminder-item">
+
+                            <div class="reminder-dot"></div>
+
+                            <div>
+                                <strong>
+                                    No reminders yet
+                                </strong>
+
+                                <span>
+                                    Your pending activities will appear here.
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                <span>
+                    © 2026 PD Coaching
+                </span>
+
+                <span>
+                    Pankaj Durvadi • Administration
+                </span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

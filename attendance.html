@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance | PD Coaching</title>
+
+    <link rel="stylesheet" href="attendance.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                PD
+            </div>
+
+            <div>
+                <h2>PD Coaching</h2>
+                <span>Pankaj Durvadi</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation automatically loaded -->
+
+        <nav class="navigation"></nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="mini-profile">
+
+                <div class="profile-avatar">
+                    PD
+                </div>
+
+                <div>
+                    <strong>Pankaj Durvadi</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    ATTENDANCE MANAGEMENT
+                </p>
+
+                <h1>
+                    Attendance
+                </h1>
+
+                <p class="subtitle">
+                    Track daily student attendance easily.
+                </p>
+
+            </div>
+
+
+            <div class="date-box">
+
+                <label for="attendanceDate">
+                    Attendance Date
+                </label>
+
+                <input
+                    type="date"
+                    id="attendanceDate"
+                >
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+
+            <!-- ================= STATS ================= -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👨‍🎓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Students
+                        </span>
+
+                        <strong id="totalStudents">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon present-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Present
+                        </span>
+
+                        <strong id="presentCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon absent-icon">
+                        ×
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Absent
+                        </span>
+
+                        <strong id="absentCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon rate-icon">
+                        %
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Attendance Rate
+                        </span>
+
+                        <strong id="attendanceRate">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TOOLBAR ================= -->
+
+            <div class="toolbar">
+
+
+                <div class="search-box">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search student..."
+                    >
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button
+                        class="mark-all-btn"
+                        onclick="markAllPresent()"
+                    >
+                        ✓ Mark All Present
+                    </button>
+
+
+                    <button
+                        class="save-btn"
+                        onclick="saveAttendance()"
+                    >
+                        Save Attendance
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ATTENDANCE PANEL ================= -->
+
+            <section class="panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Daily Attendance
+                        </h2>
+
+                        <p id="dateTitle">
+                            Attendance register
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="student-count"
+                        id="studentCount"
+                    >
+                        0 Students
+                    </span>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Phone
+                                </th>
+
+                                <th>
+                                    Class
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Attendance
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="attendanceTable">
+                        </tbody>
+
+                    </table>
+
+
+                    <div
+                        id="emptyState"
+                        class="empty-state"
+                    >
+
+                        <div>
+                            👨‍🎓
+                        </div>
+
+                        <h3>
+                            No students yet
+                        </h3>
+
+                        <p>
+                            Add students from the Students section first.
+                        </p>
+
+                        <a href="students.html">
+                            + Add Student
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div id="toast"></div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="attendance.js"></script>
+
+<script src="navigation.js"></script>
+
+</body>
+
+</html>

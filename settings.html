@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | PD Coaching</title>
+
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                PD
+            </div>
+
+            <div>
+                <h2>PD Coaching</h2>
+                <span>Pankaj Durvadi</span>
+            </div>
+
+        </div>
+
+        <nav class="navigation"></nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="mini-profile">
+
+                <div class="profile-avatar">
+                    PD
+                </div>
+
+                <div>
+                    <strong>Pankaj Durvadi</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    SYSTEM SETTINGS
+                </p>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p class="subtitle">
+                    Manage your PD Coaching preferences and data.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+
+            <!-- PROFILE -->
+
+            <section class="settings-card">
+
+                <div class="settings-heading">
+
+                    <div class="settings-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Coaching Profile
+                        </h2>
+
+                        <p>
+                            Basic information about your coaching.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Coaching Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="coachingName"
+                            placeholder="PD Coaching"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Teacher Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="teacherName"
+                            placeholder="Pankaj Durvadi"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="coachingPhone"
+                            placeholder="Enter phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="coachingAddress"
+                            placeholder="Enter coaching address"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="saveProfile()"
+                >
+                    Save Profile
+                </button>
+
+            </section>
+
+
+            <!-- APPEARANCE -->
+
+            <section class="settings-card">
+
+                <div class="settings-heading">
+
+                    <div class="settings-icon">
+                        🎨
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Appearance
+                        </h2>
+
+                        <p>
+                            Customize how PD Coaching looks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <strong>
+                            Dark Mode
+                        </strong>
+
+                        <span>
+                            Use the premium dark interface.
+                        </span>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="darkMode"
+                            checked
+                            onchange="toggleDarkMode()"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <strong>
+                            Gold Theme
+                        </strong>
+
+                        <span>
+                            Keep the Royal Black & Gold theme.
+                        </span>
+
+                    </div>
+
+
+                    <span class="theme-badge">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- DATA -->
+
+            <section class="settings-card">
+
+                <div class="settings-heading">
+
+                    <div class="settings-icon">
+                        💾
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Data Management
+                        </h2>
+
+                        <p>
+                            Manage your student and fee data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <strong>
+                            Export Data
+                        </strong>
+
+                        <span>
+                            Download your coaching data as a backup.
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="secondary-btn"
+                        onclick="exportData()"
+                    >
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="setting-row danger-row">
+
+                    <div>
+
+                        <strong>
+                            Clear All Data
+                        </strong>
+
+                        <span>
+                            Permanently remove students, fees and attendance.
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="danger-btn"
+                        onclick="clearAllData()"
+                    >
+                        Clear Data
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT -->
+
+            <section class="settings-card about-card">
+
+                <div class="settings-heading">
+
+                    <div class="settings-icon">
+                        PD
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            PD Coaching
+                        </h2>
+
+                        <p>
+                            Coaching Management System
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-info">
+
+                    <span>
+                        Version
+                    </span>
+
+                    <strong>
+                        1.0.0
+                    </strong>
+
+                </div>
+
+                <div class="about-info">
+
+                    <span>
+                        Storage
+                    </span>
+
+                    <strong>
+                        Local Device
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div id="toast"></div>
+
+
+<script src="settings.js"></script>
+<script src="navigation.js"></script>
+
+</body>
+
+</html>
